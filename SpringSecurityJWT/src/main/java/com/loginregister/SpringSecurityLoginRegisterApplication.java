@@ -13,9 +13,11 @@ public class SpringSecurityLoginRegisterApplication {
 		
 		ConfigurableApplicationContext ctx = SpringApplication.run(SpringSecurityLoginRegisterApplication.class, args);
 		
+//		CustomerRepository repos = ctx.getBean(CustomerRepository.class);
+//		System.out.println(repos.getClass().getName());
 		
-		CustomerRepository repos = ctx.getBean(CustomerRepository.class);
-		System.out.println(repos.getClass().getName());
+		int count = ctx.getBeanDefinitionCount();
+		System.out.println("Bean Defination Count : "+count);
 		
 		System.out.println("\nSpringSecurityLoginRegisterApplication.main() | Application Started Successfully...");
 		
